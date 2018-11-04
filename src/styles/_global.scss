@@ -27,3 +27,10 @@ h3 {
   font-style: italic;
   font-weight: normal;
 }
+
+a,
+a:visited,
+a:hover {
+  color: $blue-color;
+  text-decoration: underline;
+}

@@ -1,0 +1,17 @@
+.view-car {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  padding: $large-spacer;
+}
+
+.view-car__car {
+  align-items: center;
+  background-color: $white-color;
+  border-radius: $border-radius;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  margin-top: $large-spacer;
+  padding: $large-spacer;
+}

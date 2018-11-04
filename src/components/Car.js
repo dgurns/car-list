@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-export default class CarListItem extends Component {
+export default class Car extends Component {
   render() {
-    const { vendor, vehicle, status, totalCharge } = this.props;
+    const { expandedView, vendor, vehicle, status, totalCharge } = this.props;
     return (
-      <div className="car-list-item">
+      <div className={classnames('car', expandedView && 'car--expanded')}>
         <div
-          className="car-list-item__image"
+          className={classnames(
+            'car__image',
+            expandedView && 'car__image--expanded'
+          )}
           style={{ backgroundImage: `url(${vehicle.PictureURL})` }}
         />
-        <div className="car-list-item__info">
+        <div
+          className={classnames(
+            'car__info',
+            expandedView && 'car__info--expanded'
+          )}
+        >
           <h2>
             {`${vehicle['VehMakeModel']['@Name']} ($${
               totalCharge['@EstimatedTotalAmount']
@@ -18,7 +27,12 @@ export default class CarListItem extends Component {
           </h2>
           <h3>{vendor['@Name']}</h3>
         </div>
-        <div className="car-list-item__info">
+        <div
+          className={classnames(
+            'car__info',
+            expandedView && 'car__info--expanded'
+          )}
+        >
           <span>
             Air Conditioning: {vehicle['@AirConditionInd'] ? 'Yes' : 'No'}
           </span>
@@ -30,15 +44,21 @@ export default class CarListItem extends Component {
           <span>Door Count: {vehicle['@DoorCount']}</span>
           <span>Code: {vehicle['@Code']}</span>
           <span>Code Context: {vehicle['@CodeContext']}</span>
+          <span>Status: {status}</span>
         </div>
       </div>
     );
   }
 }
 
-CarListItem.propTypes = {
+Car.propTypes = {
+  expandedView: PropTypes.bool,
   vendor: PropTypes.object.isRequired,
   vehicle: PropTypes.object.isRequired,
   status: PropTypes.string.isRequired,
   totalCharge: PropTypes.object.isRequired
+};
+
+Car.defaultProps = {
+  expandedView: false
 };
