@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import { Link } from 'react-router-dom';
 
 import data from '../data/index.json';
 import Car from './Car';
@@ -53,6 +52,7 @@ class CarList extends Component {
         className="car-list__list-item"
         key={index}
         onClick={() => this.props.history.push('/view-car', { car })}
+        data-test="car-list-item"
       >
         <Car
           vendor={car['Vendor']}
@@ -68,9 +68,9 @@ class CarList extends Component {
     const { VehRentalCore } = data.VehAvailRSCore;
     const { PickUpLocation, ReturnLocation } = VehRentalCore;
     return (
-      <div className="car-list">
+      <div className="car-list" data-test="component-car-list">
         <h1>Choose a Car</h1>
-        <div className="car-list__legend">
+        <div className="car-list__legend" data-test="car-list-legend">
           <div>
             <b>Pickup:</b>{' '}
             {this.formatDateTime(VehRentalCore['@PickUpDateTime'])} at{' '}

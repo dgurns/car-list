@@ -13,6 +13,7 @@ export default class Car extends Component {
             expandedView && 'car__image--expanded'
           )}
           style={{ backgroundImage: `url(${vehicle.PictureURL})` }}
+          data-test="car-image"
         />
         <div
           className={classnames(
@@ -21,9 +22,10 @@ export default class Car extends Component {
           )}
         >
           <h2>
-            {`${vehicle['VehMakeModel']['@Name']} ($${
-              totalCharge['@EstimatedTotalAmount']
-            })`}
+            {`${vehicle['VehMakeModel']['@Name']} ($`}
+            <span data-test="car-price">
+              {totalCharge['@EstimatedTotalAmount']})
+            </span>
           </h2>
           <h3>{vendor['@Name']}</h3>
         </div>
