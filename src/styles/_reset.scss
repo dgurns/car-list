@@ -1,0 +1,27 @@
+html,
+body,
+div,
+span,
+a,
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+code,
+nav {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+html,
+body {
+  height: 100%;
+}

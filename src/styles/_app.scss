@@ -1,0 +1,32 @@
+.app {
+  align-items: flex-start;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: $large-spacer;
+}
+
+.app__legend {
+  border: 1px solid $gray-color;
+  border-radius: $border-radius;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 70px;
+  justify-content: space-around;
+  padding: 10px 15px;
+  margin: $medium-spacer 0px;
+  width: 100%;
+}
+
+.app__car-list {
+  align-items: flex-start;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}

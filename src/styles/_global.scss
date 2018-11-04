@@ -1,0 +1,29 @@
+html {
+  background-color: $light-gray-color;
+  font-size: 62.5%;
+}
+
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-size: $base-font-size;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: $large-font-size;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: $medium-font-size;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: $medium-font-size;
+  font-style: italic;
+  font-weight: normal;
+}

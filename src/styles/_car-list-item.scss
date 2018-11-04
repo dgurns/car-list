@@ -1,0 +1,34 @@
+.car-list-item {
+  background-color: $white-color;
+  border: 1px solid $white-color;
+  border-radius: $border-radius;
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: $medium-spacer;
+  padding: $small-spacer;
+  width: 100%;
+  &:hover {
+    border: 1px solid $gray-color;
+    cursor: pointer;
+  }
+}
+
+.car-list-item__image {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  margin-left: $medium-spacer;
+  width: 150px;
+}
+
+.car-list-item__info {
+  align-items: flex-start;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: $medium-spacer;
+}
